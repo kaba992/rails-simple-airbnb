@@ -1,0 +1,42 @@
+<br>
+<br>
+<nav class="navbar navbar-light bg-light">
+  <%= link_to "Back To flats", flats_path, class: "btn btn-primary navbar-brand"%>
+</nav>
+<br>
+<div class="container d-flex justify-content-around align-items-center">
+  <div class="header">
+      <h1><%= @flat.name %></h1>
+      <p><%= @flat.address %></p>
+      <br>
+      <br>
+    <div class="description">
+      <h2>A bit more about this flat...</h2>
+      <p>
+      <%= @flat.description %></p>
+      </p>
+    </div>
+      <br>
+      <br>
+    <div class="details d-flex justify-content-around align-items-center">
+      <p><%= @flat.price_per_night %></p>
+      <p><%= @flat.number_of_guests %></p>
+    </div>
+  </div>
+
+  <div class ="booking">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">From:</span>
+    </div>
+    <input type="date" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="23/12/2022">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3">To:</span>
+    </div>
+    <input type="date" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="31/12/2022">
+  </div>
+  <button class="btn btn-success btn-lg " style="width:100%">Book</button>
+  </div>
+</div>
